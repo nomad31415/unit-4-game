@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Crystal Collector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Reset CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+
+
+ <!-- Added link to the jQuery Library -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ <!-- Added a link to Bootstrap-->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ 
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+
+</head>
+<body>
+
+  <div class="jumbotron text-center">
+    <h1>Crystal Collector</h1></div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 instructions">
+            <h2>Instructions</h2> 
+            <p>At the start of the game you will be given a Random Number</p>
+            <p>Click on the four crystals below and specific amounts to your total score.</p>
+            <p>Win the game by matching your score to the random number. You lose when you go above the random number.</p>
+            <p>The value of each crystal is hidden until you click on it.</p>
+          </div>
+          <div class="col-sm-6">
+         
+                <h2>Wins: <span id="wins"></span></h2>
+                <h3 class="text-left">Losses: <span id="losses"></span></h3>
+                <h2>Score to match: <span id="scoreToMatch"></span></h2>
+                <h2>Your total score is: <span id="totalScore"></span></h2>
+            
+          </div>
+        </div>
+      <div class="row text-center">
+        <div class="col-sm-3">
+        <img src="assets/images/red-crystal.jpg" class="imgthumbnailred" alt="Red Crystal" width="200" height="200" />
+        </div>
+        <div class="col-sm-3">
+        <img src="assets/images/blue-crystal.jpg" class="imgthumbnailblue" alt="Blue Crystal" width="200" height="200" />
+        </div>
+        <div class="col-sm-3">
+        <img src="assets/images/yellow-crystal.jpg" class="imgthumbnailyellow" alt="Yellow Crystal" width="200" height="200" />
+        </div>
+        <div class="col-sm-3">
+          <img src="assets/images/green-crystal.jpg" class="imgthumbnailgreen" alt="Green Crystal" width="200" height="200" />
+        </div>
+      </div>
+      
+    </div>
+
+</body>
+<!-- JS -->
+<script src="assets/javascript/game.js"></script> 
+</html>
