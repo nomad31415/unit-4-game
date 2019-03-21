@@ -1,0 +1,47 @@
+body {
+  background-color: #eaeaea;
+}
+.jumbo-style {
+  text-align: center;
+  background-color: #ffffff;
+}
+.target-num,
+.users-num {
+  font-size: 4em;
+  color: #5d5d5d;
+}
+.panel-style {
+  border: white 0px;
+}
+.panel-style .panel-heading {
+  background-color: #419bff;
+  color: #ffffff;
+  text-align: auto;
+}
+.instruct .panel-heading {
+  background-color: #419bff;
+  color: #ffffff;
+}
+p,
+li {
+  color: #5d5d5d;
+  font-size: 1.2em;
+}
+.image-section img {
+  max-height: 100px;
+  padding: 20px;
+}
+.image-section img:hover {
+  cursor: pointer;
+}
+.image-section img:active {
+  top: 5px;
+}
+.win-group,
+.loss-group {
+  color: #5d5d5d;
+}
+.win-group h3,
+.loss-group h3 {
+  font-size: 3em;
+}

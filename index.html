@@ -1,66 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <title>Crystal Collector</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Reset CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
-
-
- <!-- Added link to the jQuery Library -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
- <!-- Added a link to Bootstrap-->
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
- 
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystals Collector</title>
+     <!-- Reset CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/styles/reset.css" />
+    <!-- Links -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="assets/styles/styles.css" />
 </head>
+
 <body>
-
-  <div class="jumbotron text-center">
-    <h1>Crystal Collector</h1></div>
-
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-6 instructions">
-            <h2>Instructions</h2> 
-            <p>At the start of the game you will be given a Random Number</p>
-            <p>Click on the four crystals below and specific amounts to your total score.</p>
-            <p>Win the game by matching your score to the random number. You lose when you go above the random number.</p>
-            <p>The value of each crystal is hidden until you click on it.</p>
-          </div>
-          <div class="col-sm-6">
-         
-                <h2>Wins: <span id="wins"></span></h2>
-                <h3 class="text-left">Losses: <span id="losses"></span></h3>
-                <h2>Score to match: <span id="scoreToMatch"></span></h2>
-                <h2>Your total score is: <span id="totalScore"></span></h2>
-            
-          </div>
-        </div>
-      <div class="row text-center">
-        <div class="col-sm-3">
-        <img src="assets/images/red-crystal.jpg" class="imgthumbnailred" alt="Red Crystal" width="200" height="200" />
-        </div>
-        <div class="col-sm-3">
-        <img src="assets/images/blue-crystal.jpg" class="imgthumbnailblue" alt="Blue Crystal" width="200" height="200" />
-        </div>
-        <div class="col-sm-3">
-        <img src="assets/images/yellow-crystal.jpg" class="imgthumbnailyellow" alt="Yellow Crystal" width="200" height="200" />
-        </div>
-        <div class="col-sm-3">
-          <img src="assets/images/green-crystal.jpg" class="imgthumbnailgreen" alt="Green Crystal" width="200" height="200" />
-        </div>
-      </div>
-      
+   <div class="wrapper">
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-style instruct">
+                            <div class="panel-heading">
+                                <h2>Crystals Collector:: Instructions</h2>
+                            </div>
+                            <div class="panel-body">
+                                <ul>
+                                    <li>You will be given a random Target Number at the start of the game.</li>
+                                    <li>There are four crystals below. By clicking on a crystal you will add a specific amount of points to Your Number.</li>
+                                    <li>You win the level by matching Your Number to the Target Number, you lose the level if Your Number goes above the Target Number.</li>
+                                    <li>The value of each crystal is hidden from you until you click on it.</li>
+                                    <li>Each time when the game starts, the game will change the values of each crystal.</li>
+                                    <li>Win 10 levels to win the game. Game Over after 10 losses.PS: 80 lines of (ES6) code!</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="col-md-6  col-sm-6 col-xs-6">
+                        <div class="panel panel-style">
+                            <div class="panel-heading"><h2>Target Number</h2></div>
+                            <div class="panel-body">
+                                <p class="target-num text-center"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <div class="panel panel-style">
+                            <div class="panel-heading"><h2>Your Number</h2></div>
+                            <div class="panel-body">
+                                <p class="users-num text-center"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 image-section text-center">
+                        <div class="panel panel-style">
+                            <div class="panel-body">
+                                <img src="assets/images/crystal-b.svg" alt="image of crystal 1" id="crystal-1" value="1" class="img-responsive col-xs-6 col-md-3 crystal">
+                                <img src="assets/images/crystal-r.svg" alt="image of crystal 2" id="crystal-2" value="2" class="img-responsive col-xs-6 col-md-3 crystal">
+                                <img src="assets/images/crystal-y.svg" alt="image of crystal 3" id="crystal-3" value="3" class="img-responsive col-xs-6 col-md-3 crystal">
+                                <img src="assets/images/crystal-g.svg" alt="image of crystal 4" id="crystal-4" value="4" class="img-responsive col-xs-6 col-md-3 crystal">
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <div class="panel-body panel-style">
+                                <div class="col-md-6 win-group">
+                                    <div class="col-md-6 text-center">
+                                        <h3>Wins:</h3>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <h3 class="wins"></h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 loss-group">
+                                    <div class="col-md-6 text-center">
+                                        <h3>Losses:</h3>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <h3 class="losses"></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-
-</body>
-<!-- JS -->
-<script src="assets/javascript/game.js"></script> 
+    <footer class="page-footer font-small pt-4 mt-4">
+        <div class="footer-copyright py-3 text-center">
+            <div class="container-fluid">
+                © 2019 Copyright: AI igorZ
+            </div>
+        </div>
+    </footer>
+    <!-- scripts -->
+    <script src="assets/javascript/game.js"></script>
+</body>      
 </html>
+
+
